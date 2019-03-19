@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Random Letter</title>
+    <h1 class="text-center" id="random-number"></h1>
+    <h2>Guess What Letter Im thinking Of!</h2>
+    <h3>Wins</h3>
+
+    <p id="wins"></p>
+    <script>
+
+    </script>
+
+
+    <h4>Losses</h4>
+    <p id="losses"></p>
+    <script>
+          document.getElementById("wins").innerHTML = wins_counter;
+    </script>
+    <h5>Guesses left</h5>
+    <!-- <p id=" " -->
+
+    <script>
+
+        function hardToType(){
+            return "bananas"; 
+        }
+
+        console.log(hardToType());
+
+        var wins_counter = 0;
+        var losses_counter = 0;
+        var guesses = 10;
+        document.getElementById("wins").innerHTML = wins_counter.toString();
+        // "My First JavaScript";
+        var letters = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s",
+            "t", "u", "w", "x", "y", "z"];
+
+        var letter; 
+
+        //    while (guesses > 0) { -->
+        document.getElementById("losses").innerHTML = losses_counter.toString();
+
+        function startGame(){
+            guesses = 10;
+            letter = letters[Math.floor(Math.random() * 26)];
+            console.log(letter);  
+        }
+
+        function checkKey(key){
+            return key === letter;
+        }
+
+        startGame();
+
+        document.onkeyup = function(e){
+            console.log(checkKey(e.key));
+        }
+     //   }
+            // wins = 0 
+            // losses = 0
+            // guesses = 9 
+            // guesses_so_far = [ ]
+            // letters = [a,b,c,d...]
+            // letter = letters[random]
+            // on_key_press { 
+            // guessed__letter = // what key was pressed
+            // if(guessed-letter) == letter) {
+            //     wins ++; 
+                // guesses-so-far= []
+            // }
+            // letter=letter[Random]
+            // guesses=
+            // else{
+               //guesses--; 
+               // guess_so_far.add}(guesssofar)
+            // if guesses == 0 then reset score and guesses so far and losses ++
+
+
+
+            
+
+
+
+    </script>
+
+    </body>
+
+</html>
